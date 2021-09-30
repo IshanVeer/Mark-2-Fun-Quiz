@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    var readlineSync= require("readline-sync");
+var username= readlineSync.question("HELLO!, What Is Your Name? ");
+
+console.log("Welcome To The Game, Superheroes "+ username +"? ")
+var score=0
+//play function
+function play(question,answer){
+  var userAnswer= readlineSync.question(question);
+    if(userAnswer===answer){
+      console.log("You are correct")
+      score= score + 1 
+    }
+ else{
+   console.log("You are wrong! ")
+ } 
+ console.log("current score: "+ score);
+ console.log("_______________");
+}
+
+
+play("What is Batman's name? ", "Bruce Wayne")
+play("Who is Tony Stark? ", "Iron-Man")
+play("Who is the strongest marvel villain? ", "Thanos")
+play("Fastest Justice League Superhero? ", "Flash")
+play("Strongest Marvel hero? ", "Captain Marvel")
+
+console.log("Total Score: "+ score)
+
+console.log("High Score: " )
+console.log( "Meera: 5")
+console.log("Prashant: 4")
+
+</body>
+</html>
